@@ -17,6 +17,11 @@ def create_bot(bot_type):
         from bot.baidu.baidu_wenxin import BaiduWenxinBot
         return BaiduWenxinBot()
 
+   elif bot_type == const.DEEPSEEK:
+        # DeepSeek 对话模型API  
+        from bot.deepseek.deepseek_bot import DeepseekBot
+        return DeepseekBot()
+
     elif bot_type == const.CHATGPT:
         # ChatGPT 网页端web接口
         from bot.chatgpt.chat_gpt_bot import ChatGPTBot
