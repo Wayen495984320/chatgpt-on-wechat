@@ -15,7 +15,7 @@ class DeepseekBot(Bot):
         # 初始化 OpenAI 客户端
         self.client = OpenAI(
             api_key=conf().get("deepseek_api_key"),
-            base_url="https://api.deepseek.com/v1"
+            base_url="https://api.deepseek.com/v1"   #base_url可依据你的密钥获取途径进行替换
         )
         self.sessions = SessionManager(DeepseekSession, model=const.DEEPSEEK_REASONER)
 
